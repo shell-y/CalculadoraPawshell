@@ -1,0 +1,151 @@
+     /* Import Google Font - Poppins */
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+     *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+       color:#b1a5ed;
+     }
+     body{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 0 10px;
+       min-height: 100vh;
+       background: #cdd0f8;
+     }
+
+     .divMae{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      padding:0;
+      margin:0;
+     }
+
+     .footer {
+      display: flex;
+      width: 100%;
+      margin: 10px;
+      position:inherit;
+      justify-content: center;
+
+      color: #b1a5ed;
+      text-shadow: 0.5px 0.5px #c1b6f9;
+      text-align: center;
+    }
+
+     .divFora{
+       max-width: 690px;
+       width: 100%;
+       padding: 30px;
+       background: #fff;
+       border-radius: 7px;
+       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+       margin: 10px 0px 10px 0px;
+     }
+     .divDentro{
+       border-radius: 5px;
+       border: 1px solid #b1a5ed;
+     }
+     .divDentro .inputTexto{
+       display: flex;
+       border-bottom: 2px double #b1a5ed;
+     }
+     .inputTexto .textoFrom{
+        border-radius: 0px;
+      }
+
+     .inputTexto .textoTo{
+       border-radius: 0px;
+       border-left: 1px solid #b1a5ed;
+     }
+     .inputTexto textarea{
+       height: 250px;
+       width: 100%;
+       border: 0;
+       outline: none;
+       resize: none;
+       background: none;
+       font-size: 18px;
+       padding: 10px 15px;
+       border-radius: 5px;
+       text-transform: uppercase;
+       text-shadow: 0.5px 0.5px #e6e2fd;
+
+     }
+     .inputTexto textarea::placeholder{
+       color: #b1a5ed;
+       text-transform: none;
+     }
+     .controls, li {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+     }
+     .controls{
+       list-style: none;
+       padding: 12px 15px;
+     }
+     .controls .selecto select{
+       color: #fa9bcf;
+       border: none;
+       outline: none;
+       font-size: 18px;
+       background:none;
+       padding-left: 5px;
+       cursor: pointer;
+       text-shadow: 0.5px 0.5px #f9dfee;
+     }
+     .divFora button{
+       width: 100%;
+       padding: 14px;
+       outline: none;
+       border: none;
+       color: #fff;
+       cursor: pointer;
+       margin-top: 20px;
+       font-size: 17px;
+       border-radius: 5px;
+       background: #fa9bcf;
+       text-shadow: 1px 1px #fe8aca;
+     }
+
+     
+     @media (max-width: 660px){
+      .divMae{
+        padding:0px;
+        margin:0px;
+      }
+      .footer{
+        font-size:13px;   
+        text-shadow: 0.3px 0.3px;     
+      }
+       .divFora{
+         padding: 20px;
+         margin: 10px 0px 10px 0px;
+       }
+       .divDentro .inputTexto{
+         flex-direction: column;
+       }
+       .inputTexto .textoTo{
+         border-left: 0px;
+         border-top: 1px solid #b1a5ed;
+       }
+       .inputTexto textarea{
+         height: 200px;
+       }
+       .controls .selecto .icons{
+         display: none;
+       }
+       .divFora button{
+         padding: 13px;
+         font-size: 16px;
+       }
+       .controls .selecto select{
+         font-size: 16px;
+       }
+
+     }

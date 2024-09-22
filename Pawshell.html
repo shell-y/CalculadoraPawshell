@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Conversor de Números</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <link rel="stylesheet" href="cssPawshell.css">
+
+  </head>
+  <body>
+    <div class="divMae">
+
+    <div class="divFora">
+      <div class="divDentro">
+        <div class="inputTexto">
+          <textarea id="inputNumero" spellcheck="false" class="textoFrom" placeholder="Insira o valor"></textarea>
+          <textarea id="caixaResultado" spellcheck="false" readonly disabled class="textoTo" placeholder="Resultado"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="selecto from">
+          
+            <select id="entrada">
+                <option value="binario">Binário</option>
+                <option value="octal">Octal</option>
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+            </select>
+          </li>
+
+          <li class="selecto to">
+            <select id="saida">
+                <option value="binario">Binário</option>
+                <option value="octal">Octal</option>
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <button onclick="converter()">Converter</button>
+    </div>
+
+    <footer class="footer">
+      SPTech - 2024 - ADSA
+      <br>
+      Pedro Leão & Shelly Nadudvari
+    </footer>
+
+</div>
+
+  </body>
+
+
+</html>
+
+
+<script>
+    function converter() {
+            const numero = inputNumero.value
+            const tipoEntrada = entrada.value
+            const tipoSaida = saida.value
+            
+            var decimal
+
+            // primeiro converte pra decimal
+            if (tipoEntrada == "binario") {
+                decimal = parseInt(numero, 2)
+            } else if (tipoEntrada == "decimal") {
+                decimal = parseInt(numero, 10)
+            } else if (tipoEntrada == "octal") {
+                decimal = parseInt(numero, 8)
+            } else if (tipoEntrada == "hexadecimal") {
+                decimal = parseInt(numero, 16)
+            }
+
+            // depois, pega o decimal e converte pra saída selecionada
+            var resultado
+
+            if (tipoSaida == "binario") {
+                resultado = decimal.toString(2)
+            } else if (tipoSaida == "decimal") {
+                resultado = decimal.toString(10)
+            } else if (tipoSaida == "octal") {
+                resultado = decimal.toString(8)
+            } else if (tipoSaida == "hexadecimal") {
+                resultado = `#${decimal.toString(16).toUpperCase()}`
+            }
+
+            // Exibir o resultado
+            caixaResultado.innerHTML = `${resultado}`
+        }
+</script>
