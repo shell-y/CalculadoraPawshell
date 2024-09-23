@@ -112,7 +112,10 @@
        background: #fa9bcf;
        text-shadow: 1px 1px #fe8aca;
      }
-
+     
+     button:hover{
+      background-color: #fe8aca;
+     }
      
      @media (max-width: 660px){
       .divMae{
